@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Welcome To The Soft..</title>
+<style>
+    body{
+        margin: 0;
+        height: 100%;
+        background: repeating-linear-gradient(lightgray,black);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    }
+    div{
+    perspective: 800px;
+    position: relative;
+    background: #111111;
+    }
+    div>ul{
+        margin: 0;
+        list-style: none;
+        padding: 0;
+    }
+    div>ul>li{
+        transition-duration: .4s;
+        cursor: context-menu;
+        padding: 10px;
+        background-color: darkseagreen ;
+        display: inline-block;
+    }
+    div>ul>li:hover{
+        background: wheat;
+    }
+    div>ul>li:hover ul{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    li>ul{
+        box-shadow: black 2px 2px 8px;
+        border:solid 1px white;
+        transition-duration: .4s;
+        top:100%;
+        padding: 0;
+        color: wheat;
+        width: 100%;
+        transform: scale(0,0);
+        transform-origin: top center;
+        opacity: 0;
+        text-align: center;
+        overflow: hidden;
+        left: 0;
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        -webkit-column-count: 3;
+        -webkit-column-rule:dashed .1mm white;
+        -moz-column-rule:dashed .1mm white;
+        -moz-column-count: 3;
+        position: absolute;
+        background: rgba(12,12,12,.72);
+        list-style: none;
+        box-sizing: border-box;
+    }
+    li>ul>li{
+        transition-duration: .3s;
+        padding: 10px;
+    }
+    li>ul>li:hover{
+    letter-spacing: 8px;
+    background: rgba(121,121,121,.3);
+    }
+</style>
+</head>
+<body>
+<div>
+<ul>
+<li>menu-1
+<ul>
+<li>menu item-1</li>    
+<li>menu item-2</li>    
+<li>menu item-3</li>    
+<li>menu item-4</li>    
+<li>menu item-5</li>    
+<li>menu item-6</li>    
+<li>menu item-7</li>    
+<li>menu item-8</li>    
+<li>menu item-9</li>    
+<li>menu item-10</li>    
+<li>menu item-11</li>    
+<li>menu item-12</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+<li>menu item-13</li>    
+</ul>
+</li> 
+<li>menu-2
+<ul>
+<li>menu item-1</li>    
+<li>menu item-2</li>    
+<li>menu item-3</li>    
+<li>menu item-4</li>    
+<li>menu item-5</li>    
+<li>menu item-6</li>    
+<li>menu item-7</li>    
+<li>menu item-8</li>    
+<li>menu item-9</li>    
+<li>menu item-10</li>    
+<li>menu item-11</li>    
+<li>menu item-12</li>    
+<li>menu item-13</li>    
+</ul>
+</li> 
+<li>menu-3
+<ul>
+<li>menu item-1</li>    
+<li>menu item-2</li>    
+<li>menu item-3</li>    
+<li>menu item-4</li>    
+<li>menu item-5</li>    
+<li>menu item-6</li>    
+<li>menu item-7</li>    
+<li>menu item-8</li>    
+<li>menu item-9</li>    
+<li>menu item-10</li>    
+<li>menu item-11</li>    
+<li>menu item-12</li>    
+<li>menu item-13</li>    
+</ul>
+</li> 
+</ul>
+</div>
+</body>
+</html>

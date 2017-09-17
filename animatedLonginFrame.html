@@ -1,0 +1,162 @@
+<html>
+<head>
+<style>
+    html{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        margin: 0;
+        background-color: wheat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loginFrame{
+        background: linear-gradient(lightgray,gray);
+        display: grid;
+        grid-row-gap: 4px;
+        grid-template-rows: auto 1fr;
+        left: 50%;
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px black;
+        height: 460px;
+        width: 400px;
+        transform: scale(0,0);
+        transform-origin: bottom center;
+        animation: anim linear .4s 1 forwards;
+    }
+    figure{
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        background: rgba(1,1,1,.4);
+        box-shadow: black 0 2px 4px;
+    }
+    img{
+        height: 100px;
+        
+    }
+    figcaption{
+        letter-spacing: 4px;
+        color: lightgray;
+        text-shadow: black 2px 2px 4px;
+        margin-top: 10px;
+        font: bolder 20px Nyala;
+    }
+    input:not([type='submit']):not([type='button']){
+        border:none;
+        border-bottom: solid gray 2px;
+        outline: none;
+        background: transparent;
+        letter-spacing: 2px;
+        outline-color: transparent;
+        font:bolder 16px arial;
+        padding-left: 10px;
+        color:floralwhite;
+        text-shadow: black 1px 1px 4px;
+    }
+    .inpContainer1,.inpContainer2{
+        position: relative;
+        margin-top: 20px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+     form{
+        padding: 10px;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+    }
+    .horRule{
+        width: 0%;
+        height: 2px;
+        transition-duration: .4s;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: black;
+        position: absolute;
+    }
+    input:focus + .horRule{
+        width: 100%;
+    }
+    label{
+        user-select:none;
+        cursor: text;
+        left: 8px;
+        letter-spacing: 4px;
+        top:50%;
+        opacity: .6;
+        transition-duration: .4s;
+        font: 600 20px arial;
+        position: absolute;
+    }
+    .animateLabel{
+        top:0%;
+        opacity: .8;
+        letter-spacing: 0px;
+    }.actButton {
+        align-items: flex-end;
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-column-gap: 4px;
+    }
+    input[type='button'],input[type='submit']{
+    font: bolder 24px Nyala;
+        background: none;
+        letter-spacing: 4px;
+        transition-duration: .3s;
+        border: none;
+        color: wheat;
+        text-shadow: black 4px 4px 5px;
+    }
+    input[type='button']:hover,input[type='submit']:hover{
+        color: deeppink;
+        text-shadow: black 2px 2px 2px;
+    }
+    @keyframes anim{
+        to{
+            transform: scale(1,1) ;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="loginFrame">
+    <figure>
+    <img src="img/user/user9.png">
+    <figcaption>USER LOGIN</figcaption>
+    </figure>
+<form>
+    <div class="inpContainer1">
+        <label for="uname">User Name</label>
+    <input autocomplete="off" id="uname" required spellcheck="false">
+    <div class="horRule"></div>
+    </div>
+    <div class="inpContainer2">
+        <label for="pwd">Password</label>
+    <input id="pwd" required spellcheck="false" type="password">
+    <div class="horRule"></div>
+    </div>
+    <div class="actButton">
+    <input type="submit" value="submit">
+    <input type="button" value="cancel">
+    </div>
+</form>    
+</div>
+    <script>
+    var div=document.querySelector(".loginFrame");
+    div.addEventListener("focusin",event=>{
+        if(event.target instanceof HTMLInputElement)
+            event.target.previousElementSibling.classList.add("animateLabel");
+    });
+    div.addEventListener("focusout",event=>{
+        if(event.target instanceof HTMLInputElement && !event.target.value)
+            event.target.previousElementSibling.classList.remove("animateLabel");
+    });
+    </script>
+</body>
+</html>
